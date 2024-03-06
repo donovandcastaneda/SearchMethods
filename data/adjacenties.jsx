@@ -65,6 +65,8 @@ Mulvane,Andover
 Andover,Newton
 Newton,El_Dorado`.trim().split('\n');
 
+console.log("Parsed adjacency list:", adjacencies);
+
 const graph = new Map();
 
 adjacencies.forEach(pair => {
@@ -76,5 +78,15 @@ adjacencies.forEach(pair => {
         graph.set(city2, []);
     }
     graph.get(city1).push(city2);
-    graph.get(city2).push(city1); // Ensure bidirectional connection
+    graph.get(city2).push(city1); // bidirectional connection
+});
+
+console.log("Sample connections:");
+console.log("Anthony connections:", graph.get("Anthony"));
+console.log("Andover connections:", graph.get("Andover"));
+console.log("Wichita connections:", graph.get("Wichita"));
+
+console.log("Complete graph:");
+graph.forEach((connections, city) => {
+    console.log(`${city}: ${connections.join(', ')}`);
 });

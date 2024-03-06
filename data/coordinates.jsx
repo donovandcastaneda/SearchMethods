@@ -19,6 +19,5 @@ export function Coordinates() {
       csvData.push(dataRow);
     })
     .on("end", function () {
-      console.log(csvData);
     });
 }
