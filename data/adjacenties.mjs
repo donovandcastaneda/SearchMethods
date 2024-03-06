@@ -1,3 +1,5 @@
+export { graph }
+
 const adjacencies = `
 Anthony,Bluff_City
 Bluff_City,Kiowa
@@ -65,10 +67,12 @@ Mulvane,Andover
 Andover,Newton
 Newton,El_Dorado`.trim().split('\n');
 
-console.log("Parsed adjacency list:", adjacencies);
+// console.log("Parsed adjacency list:", adjacencies);
 
+//store adjacenties list 
 const graph = new Map();
 
+//created the graph with adjacenties
 adjacencies.forEach(pair => {
     const [city1, city2] = pair.split(',');
     if (!graph.has(city1)) {
@@ -81,12 +85,13 @@ adjacencies.forEach(pair => {
     graph.get(city2).push(city1); // bidirectional connection
 });
 
-console.log("Sample connections:");
-console.log("Anthony connections:", graph.get("Anthony"));
-console.log("Andover connections:", graph.get("Andover"));
-console.log("Wichita connections:", graph.get("Wichita"));
+// console.log("Sample connections:");
+// console.log("Anthony connections:", graph.get("Anthony"));
+// console.log("Andover connections:", graph.get("Andover"));
+// console.log("Wichita connections:", graph.get("Wichita"));
 
-console.log("Complete graph:");
-graph.forEach((connections, city) => {
-    console.log(`${city}: ${connections.join(', ')}`);
-});
+// console.log("Complete graph:");
+// graph.forEach((connections, city) => {
+//     console.log(`${city}: ${connections.join(', ')}`);
+// });
+
