@@ -29,7 +29,7 @@
     "methods/A*-search.jsx",
     "methods/best-first-seach.jsx",
     "methods/bfs.mjs",
-    "methods/dfs.jsx",
+    "methods/dfs.mjs",
     "methods/euclidean-distance.jsx",
     "data/adjacenties.mjs",
     "data/coordinates.jsx",
