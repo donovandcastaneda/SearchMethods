@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "methods/A*-search.jsx", "methods/best-first-seach.jsx", "methods/bfs.jsx", "methods/dfs.jsx", "methods/euclidean-distance.jsx", "data/adjacenties.jsx", "data/coordinates.jsx", "src/components/input.jsx"],
   "exclude": ["node_modules"]
 }
